@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\Admin\AdminController;
 use App\Http\Controllers\Front\HomeController;
+use App\Http\Controllers\Admin\AdminSliderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -41,7 +42,9 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/dashboard', [AdminController::class, 'dashboard'])->name('admin_dashboard');
     Route::get('/edit-profile', [AdminController::class, 'edit_profile'])->name('admin_edit_profile');
     Route::post('/edit-profile-submit', [AdminController::class, 'edit_profile_submit'])->name('admin_edit_profile_submit');
-
+    Route::get('/slider/index', [AdminSliderController::class, 'index'])->name('admin_slider');
+    Route::get('/slider/create', [AdminSliderController::class, 'create'])->name('admin_slider_create');
+    Route::post('/slider/create-submit', [AdminSliderController::class, 'create_submit'])->name('admin_slider_create_submit');
 });
 
 

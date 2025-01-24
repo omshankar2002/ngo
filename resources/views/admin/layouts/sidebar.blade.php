@@ -45,6 +45,13 @@
                 </a>
             </li>
 
+            <li>
+                <a href="{{ route('admin_slider') }}" class="{{ request()->routeIs('admin_slider/*') ? 'active' : '' }}">
+                    <i class="mdi mdi-view-dashboard-outline"></i>
+                    <span> Hero </span>
+                </a>
+            </li>
+
 
     <div class="clearfix"></div>
 

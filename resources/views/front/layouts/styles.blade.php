@@ -1,6 +1,4 @@
-    <!--==============================
- All CSS File
- ============================== -->
+
     <!-- Bootstrap -->
     <link rel="stylesheet" href="{{ asset('assets-front/css/bootstrap.min.css') }}">
     <!-- Fontawesome Icon -->

@@ -1,9 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 
-
-<!-- Mirrored from coderthemes.com/adminto/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Jan 2025 22:35:34 GMT -->
-
 <head>
     <meta charset="utf-8" />
     <title>Dashboard | Adminto - Responsive Admin Dashboard Template</title>
@@ -28,18 +25,14 @@
         @include('admin.layouts.sidebar')
         @endif
 
-        @yield('main_content')
-
     </div>
     <!-- END wrapper -->
 
+    @yield('main_content')
 
-
+   
     @include('admin.layouts.scripts-footer')
 
 </body>
-
-
-<!-- Mirrored from coderthemes.com/adminto/layouts/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 22 Jan 2025 22:36:06 GMT -->
 
 </html>

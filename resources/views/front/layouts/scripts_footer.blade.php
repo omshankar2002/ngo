@@ -1,6 +1,3 @@
-    <!--==============================
-All Js File
-============================== -->
     <!-- Jquery -->
     <script src="{{ asset('assets-front/js/vendor/jquery-3.7.1.min.js') }}"></script>
     <!-- Swiper Js -->
