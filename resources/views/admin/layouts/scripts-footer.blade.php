@@ -35,11 +35,19 @@
 <!-- Dashboar init js-->
 <script src="{{asset ('assets-admin/js/pages/dashboard.init.js') }}"></script>
 
+<!-- Table Editable plugin-->
+<script src="{{asset ('assets-admin/libs/jquery-tabledit/jquery.tabledit.min.js') }}"></script>
+
+<!-- Table editable init-->
+<script src="{{asset ('assets-admin/js/pages/tabledit.init.js') }}"></script>
+
 <!-- App js-->
 <script src="{{asset ('assets-admin/js/app.js') }}"></script>
 
 <!-- Datatables init -->
 <script src="{{asset ('assets-admin/js/pages/datatables.init.js') }}"></script>
+
+
 
 <!-- iziToast JS -->
 <script src="https://cdn.jsdelivr.net/npm/izitoast@1.4.0/dist/js/iziToast.min.js"></script>

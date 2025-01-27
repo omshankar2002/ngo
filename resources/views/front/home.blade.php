@@ -24,21 +24,21 @@
                 <img src="{{ asset('assets-front/img/shape/hand-shape3.png') }}" alt="shape">
             </div>
         </div>
-        <div class="hero-bg-3-1" data-bg-src="{{ asset('assets-front/img/normal/story_1_1.png') }}"
+        @foreach($slider as $slide) 
+        <div class="hero-bg-3-1" data-bg-src="{{ asset('uploads/'.$slide->photo) }}"
             data-mask-src="{{ asset('assets-front/img/hero/hero-bg-shape3-1.png') }}"></div>
         <div class="container">
             <div class="row gx-40 align-items-center">
                 <div class="col-lg-6">
                     <div class="hero-style3">
-                        <span class="sub-title after-none">Give Hope For Homeless</span>
+                        <span class="sub-title after-none">{{ $slide->heading }}</span>
                         <h1 class="hero-title">
                             <span class="title1">Donate For A</span>
                             <span class="title2">Better <span class="text-theme2 d-inline-block">World</span></span>
                         </h1>
-                        <p class="hero-text">Explore the variety of volunteer opportunities available. From event planning
-                            and fundraising to fieldwork and administrative support</p>
+                        <p class="hero-text">{!! $slide->text !!}</p>
                         <div class="btn-wrap">
-                            <a href="#" class="th-btn">Join Us<i
+                            <a href="{{ $slide->button_link }}" class="th-btn">{{ $slide->button_text }}<i
                                     class="fa-solid fa-arrow-up-right ms-2"></i></a>
                             <a href="https://www.youtube.com/watch?v=_sI_Ps7JSEk" class="play-btn style3 popup-video"><i
                                     class="fas fa-play"></i></a>
@@ -47,6 +47,7 @@
                 </div>
             </div>
         </div>
+        @endforeach
     </div>
 
     <!--======== / Hero Section ========-->

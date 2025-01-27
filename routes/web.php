@@ -45,6 +45,8 @@ Route::middleware('admin')->prefix('admin')->group(function () {
     Route::get('/slider/index', [AdminSliderController::class, 'index'])->name('admin_slider');
     Route::get('/slider/create', [AdminSliderController::class, 'create'])->name('admin_slider_create');
     Route::post('/slider/create-submit', [AdminSliderController::class, 'create_submit'])->name('admin_slider_create_submit');
+    Route::get('/slider/edit/{id}', [AdminSliderController::class, 'edit'])->name('admin_slider_edit');
+    Route::post('/slider/edit/submit/{id}', [AdminSliderController::class, 'edit_submit'])->name('admin_slider_edit_submit');
 });
 
 
