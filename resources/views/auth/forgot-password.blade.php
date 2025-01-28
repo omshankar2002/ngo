@@ -1,25 +1,48 @@
-<x-guest-layout>
-    <div class="mb-4 text-sm text-gray-600">
-        {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
+@extends('front.layouts.app')
+
+@section('main_content')
+    <!--==============================
+                Breadcumb
+            ============================== -->
+    <div class="breadcumb-wrapper " data-bg-src="{{ asset('frontend/assets/img/bg/breadcumb-bg.jpg') }}" data-overlay="theme">
+        <div class="container">
+            <div class="breadcumb-content">
+                <h1 class="breadcumb-title">Forgot Password</h1>
+                <ul class="breadcumb-menu">
+                    <li><a href="{{route('home')}}">Home</a></li>
+                    <li>Forgot Password</li>
+                </ul>
+            </div>
+        </div>
     </div>
 
-    <!-- Session Status -->
-    <x-auth-session-status class="mb-4" :status="session('status')" />
+    <section class="space">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-xl-6 col-lg-8">
+                    <div class="add-team-form">
+                        <h2 class="title">Forgot your password?</h2>
+                        <p>Enter your email address and we will send you a link to reset your password</p>
 
-    <form method="POST" action="{{ route('password.email') }}">
-        @csrf
+                        <form method="POST" action="{{ route('password.email') }}">
+                            @csrf
+                            <div class="form-group style-border col-12">
+                                <label for="email">Email <code>*</code></label>
+                                <input id="email" type="email" class="form-control" placeholder="Email Address"
+                                    name="email" autocomplete="off">
+                            </div>
 
-        <!-- Email Address -->
-        <div>
-            <x-input-label for="email" :value="__('Email')" />
-            <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autofocus />
-            <x-input-error :messages="$errors->get('email')" class="mt-2" />
+                            <div class="form-btn col-12 mt-3">
+                                <button type="submit" class="th-btn style3">Send Reset Link</button>
+                            </div>
+                        </form>
+
+                        <div class="account__switch text-center mt-3">
+                            <p>Already have an account? <a href="{{ route('login') }}">Log in</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
-
-        <div class="flex items-center justify-end mt-4">
-            <x-primary-button>
-                {{ __('Email Password Reset Link') }}
-            </x-primary-button>
-        </div>
-    </form>
-</x-guest-layout>
+    </section>
+@endsection

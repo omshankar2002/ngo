@@ -8,7 +8,7 @@
                             href="#" role="button" aria-haspopup="false" aria-expanded="false">
                             <img src="{{asset('assets-admin/images/users/user.png') }}" alt="user-image" class="rounded-circle">
                             <span class="pro-user-name ms-1">
-                            {{ Auth::guard('admin')->user()->name }} <i class="mdi mdi-chevron-down"></i>
+                            {{ Auth::guard('web')->user()->name }} <i class="mdi mdi-chevron-down"></i>
                             </span>
                         </a>
                         <div class="dropdown-menu dropdown-menu-end profile-dropdown ">
@@ -18,18 +18,23 @@
                             </div>
 
                             <!-- item-->
-                            <a href="{{ route('admin_edit_profile') }}" class="dropdown-item notify-item">
+                            <a href="{{ route('user_profile') }}" class="dropdown-item notify-item">
                                 <i class="fe-user"></i>
                                 <span>My Account</span>
                             </a>
 
                             <div class="dropdown-divider"></div>
 
-                            <!-- item-->
-                            <a href="{{ route('admin_logout') }}" class="dropdown-item notify-item">
+
+                                  <!-- Authentication -->
+                        <form method="POST" action="{{ route('logout') }}">
+                            @csrf
+                            <a href="{{ route('logout') }}"  onclick="event.preventDefault();
+                                                this.closest('form').submit();">
                                 <i class="fe-log-out"></i>
                                 <span>Logout</span>
-                            </a>
+                            </a>    
+                        </form>
 
                         </div>
                     </li>

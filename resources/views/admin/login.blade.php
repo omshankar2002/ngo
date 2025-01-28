@@ -11,7 +11,6 @@
                         <a href="index.html">
                             <img src="assets/images/logo-dark.png" alt="" height="22" class="mx-auto">
                         </a>
-                        <p class="text-muted mt-2 mb-4">Responsive Admin Dashboard</p>
 
                     </div>
                     <div class="card">

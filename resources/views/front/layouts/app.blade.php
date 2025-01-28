@@ -78,11 +78,11 @@
         <div class="th-menu-area text-center">
             <button class="th-menu-toggle"><i class="fal fa-times"></i></button>
             <div class="mobile-logo">
-                <a href="index.html"><img src="assets/img/logo.svg" alt="Donat"></a>
+                <a href="{{ route('home') }}"><img src="assets/img/logo.svg" alt="Donat"></a>
             </div>
             <div class="th-mobile-menu">
                 <ul>
-                    <li><a href="#">Home</a></li>
+                    <li><a href="{{ route('home') }}">Home</a></li>
                     <li class="menu-item-has-children">
                         <a href="#">About</a>
                         <ul class="sub-menu">
@@ -124,8 +124,8 @@
                     <li class="menu-item-has-children">
                         <a href="#">Sign In</a>
                         <ul class="sub-menu">
-                            <li><a href="#">Login</a></li>
-                            <li><a href="#">Register</a></li>
+                            <li><a href="{{ route('login') }}">Login</a></li>
+                            <li><a href="{{ route('register') }}">Register</a></li>
                         </ul>
                     </li>
 
@@ -144,12 +144,12 @@
             <div class="container">
                 <div class="menu-area">
                     <div class="header-logo">
-                        <a href="index.html"><img src="assets/img/logo.svg" alt="Donat"></a>
+                        <a href="{{ route('home') }}"><img src="assets/img/logo.svg" alt="Donat"></a>
                     </div>
                     <div class="menu-area-wrap">
                         <nav class="main-menu d-none d-lg-block">
                             <ul>
-                                <li><a href="#">Home</a></li>
+                                <li><a href="{{ route('home') }}">Home</a></li>
                                 <li class="menu-item-has-children">
                                     <a href="#">About</a>
                                     <ul class="sub-menu">
@@ -193,8 +193,8 @@
                                 <li class="menu-item-has-children">
                                     <a href="#">Sign In</a>
                                     <ul class="sub-menu">
-                                        <li><a href="#">Login</a></li>
-                                        <li><a href="#">Register</a></li>
+                                        <li><a href="{{ route('login') }}">Login</a></li>
+                                        <li><a href="{{ route('register') }}">Register</a></li>
                                     </ul>
                                 </li>
 
@@ -241,7 +241,7 @@
                         <div class="widget footer-widget">
                             <div class="th-widget-about">
                                 <div class="about-logo">
-                                    <a href="index.html"><img src="{{ asset('assets/img/logo-white.svg') }}"
+                                    <a href="{{ route('home') }}"><img src="{{ asset('assets/img/logo-white.svg') }}"
                                             alt="Donat"></a>
                                 </div>
                                 <p class="about-text mb-3">LetsContribute is a non-profit organization dedicated to

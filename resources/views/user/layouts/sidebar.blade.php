@@ -8,7 +8,7 @@
 
         <img src="{{asset ('assets-admin/images/users/user.png') }}" alt="user-img" title="Mat Helme" class="rounded-circle img-thumbnail avatar-md">
             <div class="dropdown">
-                <a href="#" class="user-name dropdown-toggle h5 mt-2 mb-1 d-block" data-bs-toggle="dropdown"  aria-expanded="false">     {{ Auth::guard('admin')->user()->name }} </a>
+                <a href="#" class="user-name dropdown-toggle h5 mt-2 mb-1 d-block" data-bs-toggle="dropdown"  aria-expanded="false">     {{ Auth::guard('web')->user()->name }} </a>
                 <div class="dropdown-menu user-pro-dropdown">
 
                     <!-- item-->
@@ -26,8 +26,6 @@
                 </div>
             </div>
 
-        <p class="text-muted left-user-info">Admin Head</p>
-
      
     </div>
 
@@ -39,19 +37,12 @@
             <li class="menu-title">Navigation</li>
     
             <li>
-                <a href="{{ route('admin_dashboard') }}" class="{{ request()->routeIs('admin_dashboard') ? 'active' : '' }}">
+                <a href="{{ route('user_dashboard') }}" class="{{ request()->routeIs('admin_dashboard') ? 'active' : '' }}">
                     <i class="mdi mdi-view-dashboard-outline"></i>
                     <span> Dashboard </span>
                 </a>
             </li>
 
-            <li>
-                <a href="{{ route('admin_slider') }}" class="{{ request()->routeIs('admin_slider/*') ? 'active' : '' }}">
-                <i class="mdi mdi-image-area"></i>
-
-                    <span> Hero </span>
-                </a>
-            </li>
 
 
     <div class="clearfix"></div>
